@@ -24,6 +24,7 @@
             }
             function setup() {
                 createCanvas(w,h);
+                fireball = loadImage('fireball.png');
             }
 
             function draw() {
@@ -34,6 +35,7 @@
                     boing.play();
                 }
                 //image(variablename,w,y,width,height)
+                image(fireball,MouseX,MouseY,100,100);
             }
         </script>
     </body>

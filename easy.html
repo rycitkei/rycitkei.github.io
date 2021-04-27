@@ -23,10 +23,6 @@
             var red;
             var bubble;
             var timer = 0;
-            var changeColor = 0;
-            var cool = true;
-            var gstart;
-            var b = 0;
             function setup() {
                 createCanvas(w,h);
                 player = new player();
@@ -38,7 +34,6 @@
                 player.update();
                 bubble.show();
                 bubble.update();
-                textSize(70);
             }
             function player() {
                 ///force of gravity(force), can be in any direction
@@ -49,7 +44,7 @@
                 this.velocity = 0;
                 //show the object
                 this.count = 0;
-                this.c = color('grey');
+                this.c = color(255,0,0);
                 this.show = function() {
                     fill(this.c);
                     circle(x,y,50);
@@ -104,7 +99,6 @@
                     //right
                     if ((keyIsDown(68)) && (x < w-25)) {
                         x += 5;
-                    }
                     }
                 }
             }

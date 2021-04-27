@@ -49,7 +49,7 @@
                 this.velocity = 0;
                 //show the object
                 this.count = 0;
-                this.c = color(255,0,0);
+                this.c = image(pencil,x,y,50,50);
                 this.show = function() {
                     fill(this.c);
                     circle(x,y,50);
@@ -105,17 +105,6 @@
                     if ((keyIsDown(68)) && (x < w-25)) {
                         x += 5;
                     }
-                    this.change = random(200,100000);
-                    if (millis() >= this.change + changeColor) {
-                        if (cool == true) {
-                            this.c = color(255, 0, 0);
-                            cool = false;
-                        }
-                        else if (cool == false) {
-                            this.c = color(0,0,255);
-                            cool = true;
-                        }
-                        changeColor = millis();
                     }
                 }
             }

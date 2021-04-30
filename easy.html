@@ -14,7 +14,9 @@
             }
         </style>
         <script>
-            
+            //make it no same color/size
+            //no start button
+            //make it in center
             var w = window.innerWidth;
             var h = window.innerHeight;
             var x = w/2;
@@ -27,6 +29,7 @@
                 createCanvas(w,h);
                 player = new player();
                 bubble = new bubble();
+                fireball = loadImage('instructions.jpg');
             }
             function draw() {
                 clear();
@@ -44,7 +47,7 @@
                 this.velocity = 0;
                 //show the object
                 this.count = 0;
-                this.c = color(255,0,0);
+                this.c = image("fireball");
                 this.show = function() {
                     fill(this.c);
                     circle(x,y,50);

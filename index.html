@@ -21,9 +21,6 @@
             var pro;
             function setup() {
                 createCanvas(w,h);
-                easy = createButton('Start');
-                easy.position(5,h-40);
-                easy.mousePressed(easier);
                 fireball = loadImage('instructions.jpg');
                 /*
                 med = createButton('Medium');
@@ -38,24 +35,18 @@
                 clear();
                 //create title
                 textSize(70);
-                text('Balloon Game',0,60);
+                text('Bubble',0,60);
                 //how to play
                 textSize(30);
                 text('How to play:',0,100);
-                image(fireball,0,150,400,400);
+                image(fireball,x,150,500,400);
                 //choose game mode
-                text('Click to start',0,h-50);
+                text('Press the Enter key to start',x,y);
+                if (keIsDown(13)) {
+                    location.href = 'easy.html'
+                }
 
 
-            }
-            function easier() {
-                location.href = 'easy.html';
-            }
-            function medi() {
-                location.href = 'med.html';
-            }
-            function proMode() {
-                location.href = 'pro.html';
             }
         </script>
     </body>

@@ -29,7 +29,7 @@
                 createCanvas(w,h);
                 player = new player();
                 bubble = new bubble();
-                fireball = loadImage('instructions.jpg');
+                var pencil = loadImage('pencil.png');
             }
             function draw() {
                 clear();
@@ -47,10 +47,10 @@
                 this.velocity = 0;
                 //show the object
                 this.count = 0;
-                this.c = image("fireball");
                 this.show = function() {
-                    fill(this.c);
+                    noStroke();
                     circle(x,y,50);
+                    image(pencil,x,y,50,50);
                 }
                 ///update player
                 this.update = function() {

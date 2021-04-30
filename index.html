@@ -37,13 +37,12 @@
                 clear();
                 //create title
                 textSize(70);
-                text('Bubble',0,60);
+                text('Bubble',x-45,60);
                 //how to play
-                textSize(30);
-                text('How to play:',0,100);
-                image(fireball,x-250,130,500,400);
+                image(fireball,x-250,130,300,400);
                 //choose game mode
-                text('Press the Enter key to start',x-480,600);
+                textSize(30);
+                text('Press the Enter key to start',x-250,400);
                 if (keyIsDown(13)) {
                     location.href = 'easy.html';
                 }

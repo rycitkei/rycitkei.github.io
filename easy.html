@@ -14,9 +14,8 @@
             }
         </style>
         <script>
-            //make it no same color/size
-            //no start button
-            //make it in center
+            //change lift
+            //make jumps smaller
             var w = window.innerWidth;
             var h = window.innerHeight;
             var x = w/2;
@@ -43,7 +42,7 @@
                 ///force of gravity(force), can be in any direction
                 this.gravity = 1;
                 ///oppositional force
-                this.lift = -5;
+                this.lift = -3;
                 //speed of pur player
                 this.velocity = 0;
                 //show the object
@@ -94,15 +93,15 @@
                     }
                     //down
                     if ((keyIsDown(83)) && (y < h-25)) {
-                        y += 5;
+                        y += 3;
                     }
                     //left
                     if ((keyIsDown(65)) && (x > 25)) {
-                        x -= 5;
+                        x -= 3;
                     }
                     //right
                     if ((keyIsDown(68)) && (x < w-25)) {
-                        x += 5;
+                        x += 3;
                     }
                 }
             }

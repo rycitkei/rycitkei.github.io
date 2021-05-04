@@ -91,9 +91,11 @@
                     if (keyIsDown(87)) {
                         this.velocity += this.lift;
                         this.count = 0;
-                        if (y < 25) {
-                            y = 25;
-                        }
+                        
+                    }
+                    //dont leave screen
+                    if (y < 25) {
+                        y = 25;
                     }
                     //down
                     if ((keyIsDown(83)) && (y < h-25)) {

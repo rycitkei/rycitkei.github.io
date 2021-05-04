@@ -16,6 +16,7 @@
         <script>
             //change lift
             //make jumps smaller
+            //download all cdn to github no link
             var w = window.innerWidth;
             var h = window.innerHeight;
             var x = w/2;
@@ -87,9 +88,12 @@
                     }
                     
                     //up
-                    if ((keyIsDown(87)) && (y > 25)) {
+                    if (keyIsDown(87)) {
                         this.velocity += this.lift;
                         this.count = 0;
+                        if (y < 25) {
+                            y = 25;
+                        }
                     }
                     //down
                     if ((keyIsDown(83)) && (y < h-25)) {
